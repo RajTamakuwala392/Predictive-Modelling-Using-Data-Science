@@ -1,0 +1,115 @@
+{% extends "userlayout.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-sm-12 col-xl-6">
+    <div class="bg-dark rounded h-100 p-4">
+      <h3>scikit learn principle  component analysis </h3>
+      <form method="POST" action="/scikitpca"  enctype="multipart/form-data">
+        <div class="form-group">
+         
+          <label for="upload1" class="formbold-form-label">
+            Upload File
+          </label>
+          <input
+            type="file"
+            name="scikitf"
+            id="upload1"
+            class="formbold-form-input formbold-form-file"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">pca</button>
+      </form>
+      <div class="mt-4">
+        <p> {% for row in datas %}
+            <p>{{ row }}</p>
+          {% endfor %}</p>
+        <p>{% for c in xv%}</p>
+       <p>{{c}}</p>
+        {% endfor %}
+         
+      </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+    <div class="col-sm-12 col-xl-6">
+        <div class="bg-dark rounded h-100 p-4">
+          <h3>scikit learn bayesian regression</h3>
+          <form method="POST" action="/bayesianr"  enctype="multipart/form-data">
+            <div class="form-group">
+             
+              <label for="upload1" class="formbold-form-label">
+                Upload Files
+              </label>
+              <input
+                type="file"
+                name="bayesian"
+                id="upload1"
+                class="formbold-form-input formbold-form-file"
+              />
+              <div class="form-group">
+                <label for="test">testsize:</label>
+                <input type="test" id="test" name="test" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary">bayesian regression </button>
+              </form>
+              <div class="mt-4">
+                {% if mse %}
+                <h2>the mean squared error of the bayesian regression </h2>
+                <h2> {{ mse }}</h2>
+                {% endif %}
+                
+                 
+              </div>
+
+        </div>
+
+
+
+
+
+  </div>
+    
+
+
+    
+  
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   
+</div>
+
+
+
+
+{% endblock %}

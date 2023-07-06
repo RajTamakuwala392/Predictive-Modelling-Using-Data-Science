@@ -1,0 +1,191 @@
+{% extends "userlayout.html" %}
+
+{% block content %}
+<br>
+<h2>Matplotlib is a low level graph plotting library in python that serves as a visualization utility.</h2>
+<br>
+<p>Matplotlib is open source and we can use it freely.</p>
+
+<p> Matplotlib is mostly written in python, a few segments are written in C, Objective-C and Javascript for Platform compatibility.</p>
+
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="page-header">
+      <h3 class="page-title"> Form elements </h3>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Forms</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="row">
+      <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title"> Enter following details for simple plotting </h1>
+            <form class="forms-sample" method="post" action="{{url_for('createplot')}}" enctype="multipart/form-data">
+              <div class="form-group">
+                  <label for="pldata1">data1:</label>
+                  <input type="text" class="form-control" name="pldata1",id="exampleInputName1" placeholder="enter values ">
+              </div>
+              <div class="form-group">
+                  <label for="pldata2">data2</label>
+                  <input type="text" class="form-control" name="pldata2",id="exampleInputName1" placeholder="enter values ">
+              </div>
+              <div class="form-group">
+                <label for="ls">line style</label>
+                <input type="text" class="form-control" name="ls",id="exampleInputName1" placeholder="enter values ">
+              </div>
+              <div class="form-group">
+                <label for="lw">line width</label>
+                <input type="text" class="form-control" name="lw",id="exampleInputName1" placeholder="enter values ">
+              </div>
+              <div class="form-group">
+                <label for="marker">marker</label>
+                <input type="text" class="form-control" name="marker",id="exampleInputName1" placeholder="enter values ">
+              </div>
+              <div class="form-group">
+                <label for="color">color</label>
+                <input type="text" class="form-control" name="color",id="exampleInputName1" placeholder="enter values ">
+              </div>
+              <button type="submit"  class="btn btn-primary mr-2">sumbit</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="page-header">
+      <h3 class="page-title"> Form elements </h3>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Forms</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+        </ol>
+      </nav>
+    </div>
+      <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title"> Enter following details for scatter plotting </h1>
+              <form class="forms-sample" method="post" action="{{url_for('createsplot')}}" enctype="multipart/form-data">
+                  <div class="form-group">
+                      <label for="xdata">x-data:</label>
+                      <input type="text" class="form-control" name="xdata",id="exampleInputName1" placeholder="enter values ">
+                  </div>
+                  <div class="form-group">
+                      <label for="ydata">y-data</label>
+                      <input type="text" class="form-control" name="ydata",id="exampleInputName1" placeholder="enter values ">
+                  </div>
+                  <div class="form-group">
+                    <label for="colorr">color range</label>
+                    <input type="text" class="form-control" name="colorr",id="exampleInputName1" placeholder="enter values ">
+                </div>
+                <div class="form-group">
+                    <label for="cmap">cmap</label>
+                    <input type="text" class="form-control" name="cmap",id="exampleInputName1" placeholder="enter values ">
+                </div>
+                <div class="form-group">
+                    <label for="alpha">alpha</label>
+                    <input type="text" class="form-control" name="aplha",id="exampleInputName1" placeholder="enter values ">
+                </div>
+                <div class="form-group">
+                    <label for="size">size</label>
+                    <input type="text" class="form-control" name="size",id="exampleInputName1" placeholder="enter values ">
+                </div>
+                  <button type="submit"  class="btn btn-primary mr-2">sumbit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="page-header">
+      <h3 class="page-title"> Form elements </h3>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Forms</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+        </ol>
+      </nav>
+    </div>    
+      <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title"> Enter following details for piechart </h1>
+              <form class="forms-sample" method="post" action="{{url_for('createpie')}}" enctype="multipart/form-data">
+                  <div class="form-group">
+                      <label for="datapi">data:</label>
+                      <input type="text" class="form-control" name="datapi",id="exampleInputName1" placeholder="enter values ">
+                  </div>
+                  <div class="form-group">
+                      <label for="colorpi">color of the pie</label>
+                      <input type="text" class="form-control" name="colorpi",id="exampleInputName1" placeholder="enter values ">
+                  </div>
+                  <div class="form-group">
+                    <label for="labels">labels</label>
+                    <input type="text" class="form-control" name="labels",id="exampleInputName1" placeholder="enter values ">
+                </div>
+                <div class="form-group">
+                    <label for="explode">explode</label>
+                    <input type="text" class="form-control" name="explode",id="exampleInputName1" placeholder="enter values ">
+                </div>
+                  <button type="submit"  class="btn btn-primary mr-2">submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="page-header">
+      <h3 class="page-title"> Form elements </h3>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Forms</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+        </ol>
+      </nav>
+    </div>   
+
+      <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title"> Enter following details for 3d surface plot </h1>
+              <form class="forms-sample" method="post" action="{{url_for('create3d')}}" enctype="multipart/form-data">
+                  <div class="form-group">
+                      <label for="x">x:</label>
+                      <input type="text" class="form-control" name="x",id="exampleInputName1" placeholder="enter values ">
+                  </div>
+                 
+                  <div class="y">
+                      <label for="y">y</label>
+                      <input type="text" class="form-control" name="y",id="exampleInputName1" placeholder="enter values ">
+                  </div>
+                  
+                <div class="form-group">
+                    <label for="z">z</label>
+                    <input type="text" class="form-control" name="z",id="exampleInputName1" placeholder="enter values ">
+                </div>
+                
+                  <button type="submit"  class="btn btn-primary mr-2">sumbit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  {% endblock %}

@@ -1,0 +1,16 @@
+{% extends "userlayout.html" %}
+
+{% block content %}
+
+<h1 align="center">output</h1>
+
+<br>
+<div align="center">
+    plot
+    <!-- <img src="static/img/confusion.png" width="450" height="300"> -->
+    <img src="data:image/png;base64,{{ image }}">
+</div>
+<br>
+
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "userlayout.html" %} 
+<body bgcolor="black">
+    
+
+{% block content %}
+    <h3 style="color: black;">WHAT IS K-MEAN CLUSTERING?</h3>
+    <br>
+    <p style="color:black;font-size: 20px;font-family: 'Times New Roman', Times, serif;";> K-Means Clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster</p>
+    <br>
+    <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-header">
+            <h3 class="page-title"> Form elements </h3>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+              </ol>
+            </nav>
+          </div>    
+          <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        
+                        <h1 class="card-title">Upload data set for clustering</h1>
+                        <form class="forms-sample" method="post" action="{{url_for('kmean')}}" enctype="multipart/form-data">
+                    
+                    
+                            <label for="exampleInputName1">UPLOAD DATASET : </label>
+                            <input type="file" id="myFile" name="upfile" required>
+                            <br>
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        </form>  
+                    
+       
+
+
+    <div align="center">
+        For finding the best number of clusters:
+        
+        <img src="data:image/png;base64,{{ lime }}">
+        
+ 
+    <br>
+    <div>
+        The predictions made by the kmeans model:
+        <h5> {{ x }}</h5>
+        <br><br>
+    
+    <div align="center">
+        The clusters:
+        <img src="data:image/png;base64,{{ scatter }}">
+         <br>
+    <div align="center">
+        The amount of datapoints in clusters:
+        <img src="data:image/png;base64,{{ count }}">  <br>         
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}

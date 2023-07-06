@@ -1,0 +1,28 @@
+{% extends "userlayout.html" %}
+
+{% block content %}
+<div class="row">
+
+    <div class="col-sm-12 col-xl-6">
+        <div class="bg-dark rounded h-100 p-4">
+            <h3> Enter following details for visualization  DBScan</h3>
+            <form class="forms-sample" method="post" action="{{url_for('dbsn')}}" enctype="multipart/form-data">
+                <label for="exampleInputName1">UPLOAD DATASET:</label>
+                <input type="file" id="myFile" name="upfile" required><br>
+                <div class="form-group" style="color:white;">
+                    <label for="eps">eps:</label>
+                    <input type="text" id="eps" name="eps" class="form-control">
+                    
+                  </div>
+                  <div class="form-group" style="color:white;">
+                    <label for="min_samples">min samples:</label>
+                    <input type="text" id="min_samples" name="min_samples" class="form-control">
+                    
+                  </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

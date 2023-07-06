@@ -1,0 +1,26 @@
+{% extends "userlayout.html" %}
+
+{% block content %}
+
+<h1 align="center">Output</h1>
+<div align="center">
+    Accuracy of the model; {% if acc %} {{acc}} {% endif %}
+
+    <div align="center">
+        f1 SCORE of the model; {% if fscore %} {{fscore}} {% endif %}
+   
+<br>
+        <div align="center">
+            Confusion Matrix:
+            <!-- <img src="static/img/confusion.png" width="450" height="300"> -->
+            <img src="data:image/png;base64,{{ img }}">
+           
+<br>
+            <div align="center">
+                ROC curve Matrix:
+                <img src="data:image/png;base64,{{ img1 }}"> 
+            </div>
+        </div>
+    </div>  
+</div>    
+{% endblock %}

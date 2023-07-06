@@ -1,0 +1,138 @@
+{% extends "userlayout.html" %}
+
+{% block content %}
+
+
+  <br>
+  <h3>SciPy stands for Scientific Python.</h3>
+  <br>
+
+  <p>1:- SciPy is a scientific computation library that uses NumPy underneath</p>
+  <p>2:- It provides more utility functions for optimization, stats and signal processing.</p> 
+  <p>3:- SciPy has optimized and added functions that are frequently used in NumPy and Data Science.</p> 
+  <p>4:- SciPy is predominantly written in Python, but a few segments are written in C</p>
+  
+
+<div class="row">
+  <div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title"> Enter following details for calculating eucledian distance</h1>
+        <form class="forms-sample" method="post" action="{{url_for('eu_distance')}}" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="p1">enter first no</label>
+                <input type="text" id="p1" class="form-control" name="p1",id="exampleInputName1" placeholder="number in form of (x,y) ">
+            </div>
+            <div class="form-group">
+                <label for="p2">enter second no</label>
+                <input type="text" class="form-control" name="p2",id="p2" placeholder="number in form of (x,y) ">
+            </div>
+            <button type="submit"  class="btn btn-primary mr-2">distance</button>
+        </form>
+        <div class="mt-4">
+            {% if output %}
+            <h2>result: {{ output }}</h2>
+            {% endif %}
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title"> Enter following details for calculating manhattan distance</h1>
+          <form class="forms-sample" method="post" action="{{url_for('manhattan_distance')}}" enctype="multipart/form-data">
+              <div class="form-group">
+                  <label for="p11">enter first no</label>
+                  <input type="text" id="p11" class="form-control" name="p11",id="exampleInputName1" placeholder="number in form of (x,y) ">
+              </div>
+              <div class="form-group">
+                  <label for="p22">enter second no</label>
+                  <input type="text" class="form-control" name="p22",id="exampleInputName1" placeholder="number in form of (x,y) ">
+              </div>
+              <button type="submit"  class="btn btn-primary mr-2">distance</button>
+          </form>
+          <div class="mt-4">
+              {% if output1 %}
+              <h2>result1: {{ output1 }}</h2>
+              {% endif %}
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title"> Enter following details for stastiscal description </h1>
+          <form class="forms-sample" method="post" action="{{url_for('stats_desc')}}" enctype="multipart/form-data">
+              <div class="form-group">
+                  <label for="n">enter array size</label>
+                  <input type="number" class="form-control" name="n",id="exampleInputName1" placeholder="enter values ">
+              </div>
+              <button type="submit"  class="btn btn-primary mr-2">sumbit</button>
+          </form>
+          <div class="mt-4" style="display: flex">
+            <div>
+              {% if output2 %}
+                <h2> {{ output2 }}</h2>
+              {% endif %}
+            </div>
+          </div>   
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3>Normality tests are based on the skewness and kurtosis.</h3>
+  <p>Skewness:A measure of symmetry in data.</p>
+  <p>Kurtosis:A measure of whether the data is heavy or lightly tailed to a normal distribution</p>
+  <p>P value: P value tells how close to extreme the data actually is.</p>
+  <p>t-tests:T-tests are used to determine if there is significant deference between means of two variables and lets us know if they belong to the same distribution.</p>
+  <br>
+  
+
+  <div class="row">
+    <div class="col-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title"> Enter following details for normality test </h1>
+          <form class="forms-sample" method="post" action="{{url_for('normalitytest')}}" enctype="multipart/form-data">
+              <div class="form-group">
+                  <label for="n">enter array size</label>
+                  <input type="number" class="form-control" name="n",id="exampleInputName1" placeholder="enter values ">
+              </div>
+              <button type="submit"  class="btn btn-primary mr-2">sumbit</button>
+          </form>
+          <div class="mt-4" style="display: flex">
+            <div>
+              {% if o %}
+                <h2> {{ o }}</h2>
+              {% endif %}
+            </div>
+          </div>
+          <div class="mt-4" style="display: flex">
+            <div>
+              {% if q %}
+                <h2>skewness: {{ q }}</h2>
+              {% endif %}
+            </div>
+          </div> 
+          <div class="mt-4" style="display: flex">
+            <div>
+              {% if r %}
+                <h2>kurtosis {{ r }}</h2>
+              {% endif %}
+            </div>
+          </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

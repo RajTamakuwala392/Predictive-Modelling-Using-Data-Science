@@ -1,0 +1,82 @@
+{% extends "userlayout.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-sm-12 col-xl-6">
+    <div class="bg-dark rounded h-100 p-4">
+      <h3>dataseries creator</h3>
+      <form method="POST" action="/createseries">
+        <div class="form-group">
+          <label for="df1">index:</label>
+          <input type="text" id="df1" name="df1" class="form-control">
+          <label for="data">value:</label>
+          <input type="text" id="data" name="data" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Create series</button>
+      </form>
+      <div class="mt-4" style="display:flex">
+        <div>
+          <p>index:</p>
+          {% for row in datasi %}
+          <p>{{ row }}</p>
+          {% endfor %}
+        </div>
+        <div>
+          <p>data:</p>
+          {% for row in datas %}
+          <p>{{ row }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-xl-6">
+    <div class="bg-dark rounded h-100 p-4">
+      <h3>csv file</h3>
+      <form method="POST" action="/csv" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="upload" class="formbold-form-label">Upload File</label>
+          <input type="file" name="uploadcsv" id="upload" class="formbold-form-input formbold-form-file" />
+        </div>
+        <button type="submit" class="btn btn-primary">upload file</button>
+      </form>
+      <div class="mt-4">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-xl-6">
+    <div class="bg-dark rounded h-100 p-4">
+      <h3>csv file describe</h3>
+      <form method="POST" action="/csvdesc" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="upload" class="formbold-form-label">describe csv data</label>
+          <input type="file" name="uploadcsv1" id="upload" class="formbold-form-input formbold-form-file" />
+        </div>
+        <button type="submit" class="btn btn-primary">describe</button>
+      </form>
+      <div class="mt-4">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-xl-6">
+    <div class="bg-dark rounded h-100 p-4">
+      <h3>csv file information</h3>
+      <form method="POST" action="/csvinfo" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="upload" class="formbold-form-label">Upload File</label>
+          <input type="file" name="csvinform" id="upload" class="formbold-form-input formbold-form-file" />
+        </div>
+        <button type="submit" class="btn btn-primary">get information</button>
+      </form>
+      <div class="mt-4">
+        <p></p>
+        <p></p>
+                  
+             
+        
+    </div>
+</div>
+
+{% endblock %}

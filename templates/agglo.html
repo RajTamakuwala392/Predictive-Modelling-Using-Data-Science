@@ -1,0 +1,64 @@
+{% extends "userlayout.html" %}
+
+{% block content %}
+
+
+
+  <h3 align="center" style="color:black; font-size: 55px;font-family: 'Times New Roman', Times, serif;">Agglomerative Clustering</h3>
+
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title"> Enter following details Agglomerative Clustering</h1>
+                <form class="forms-sample" method="post" action="{{url_for('agglomerative')}}" enctype="multipart/form-data">
+                
+                <label for="exampleInputName1">UPLOAD DATASET : </label>
+                <input type="file" id="myFile" name="upfile" required>
+                
+                <button type="submit"  class="btn btn-primary mr-2">submit</button>
+                <button class="btn btn-dark">Cancel</button>
+                </form>   
+    
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+    <div align="center">
+         clustering age:
+        
+        <img src="data:image/png;base64,{{ img0000 }}">
+        
+    </div>
+    <br>
+   
+    <br>
+    <div align="center">
+        Selecting Annual Income and Spending Scores by index:
+        <img src="data:image/png;base64,{{ img0001 }}">
+        
+    </div>
+    <br>
+    <div align="center">
+        Implementing an Agglomerative Hierarchical Clustering:
+        <img src="data:image/png;base64,{{ img0002 }}">
+    </div>
+    <br>
+    <br>
+    <div align="center">
+         dsgfv clusters:
+        <img src="data:image/png;base64,{{ img0003 }}">
+    </div>
+    <br>
+    <br>
+    <div align="center">
+        clusters:
+        <img src="data:image/png;base64,{{ img0004 }}">
+    </div>
+    <br>
+
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "userlayout.html" %}
+
+{% block content %}
+
+<h1 align="center">output</h1>
+
+<br>
+<div align="center">
+    <h1>roc operating characteristics</h1>
+    <!-- <img src="static/img/confusion.png" width="450" height="300"> -->
+    <img src="data:image/png;base64,{{ im9 }}",width="450" height="300">
+</div>
+<div align="center">
+    <h1>confusion matrix comparsion</h1>
+    <!-- <img src="static/img/confusion.png" width="450" height="300"> -->
+    <img src="data:image/png;base64,{{ im4 }}",width="450" height="300">
+</div>
+<div align="center">
+    <h1> f1_score comparsion</h1>
+    <!-- <img src="static/img/confusion.png" width="450" height="300"> -->
+    <img src="data:image/png;base64,{{ im5 }}",width="450" height="300">
+</div>
+<div align="center">
+    <h1>accuracy comparsion of different alogoritms</h1>
+    <!-- <img src="static/img/confusion.png" width="450" height="300"> -->
+    <img src="data:image/png;base64,{{ img7 }}",width="450" height="300">
+</div>
+<br>
+
+
+{% endblock %}
